@@ -6,7 +6,7 @@ import json
 
 class CiscoDevice:
      
-    def get_device_info(self):
+    def get_vlans_info(self):
         with open("hosts", "r") as f:
             addresses = f.read().splitlines()
         
@@ -30,7 +30,11 @@ class CiscoDevice:
             
             hostname_pattern = r'Device.+name:.(\S+)'
             hostname = re.findall(hostname_pattern,show_ver_output)
-            print(f'Hostname: {hostname}')
+            
+            """
+            Using FORE to change line color
+            """
+            print(Fore.YELLOW + f'Hostname:{hostname}' + Fore.RESET)
 
             vlanid_pattern = r"vlan_id':.'(\d+)"
             vlanid = re.findall(vlanid_pattern,str(show_vlan))
@@ -38,28 +42,15 @@ class CiscoDevice:
 
             vlanfull_pattern = r"vlan_id':.'(\d+).,.'vlan_name':.'(\S+\w)"
             vlanid_name = re.findall(vlanfull_pattern,str(show_vlan))
-            print(f'Vlan and name: {vlanid_name}\n')
+            print(f'Vlan and name: {vlanid_name}\n')            
             
-            model_pattern = r'cisco.Nexus9000.(\S+)'
-            model = re.findall(model_pattern,show_ver_output)
-            print(f'Model: {model}')
-            
-            version_pattern = r'NXOS.+version.(\S+)'
-            version = re.findall(version_pattern, show_ver_output)
-            print(f'NXOS Version: {version}')
-            
-            uptime_pattern = r'Kernel.uptime.is.(\S.*)'
-            uptime = re.findall(uptime_pattern,show_ver_output)
-            print(f'Uptime: {uptime}')
-            
-            
-            print(json.dumps(show_vlan, indent = 2))
+            #print(json.dumps(show_vlan, indent = 2))
             
             #show_clock = ssh_connection.send_command('show clock')
             #print(f"Hour: {show_clock}")
 
 sa = CiscoDevice()
-sa.get_device_info()
+sa.get_vlans_info()
     
 
     
