@@ -13,9 +13,9 @@ class CiscoDevice:
         for devices in addresses:
             device = {"device_type": "cisco_nxos",
                     "host": devices,
-                    "username": net_conn.username,
-                    "password": net_conn.passwd,
-                    "secret": net_conn.passwd,
+                    "username": net_conn.user_lab,
+                    "password": net_conn.pass_lab,
+                    "secret": net_conn.pass_lab,
             }
 
             # Connect to device
