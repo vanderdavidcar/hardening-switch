@@ -2,7 +2,7 @@ from netmiko import ConnectHandler
 import net_conn
 import re
 from colorama import Fore
-
+import threading
 
 class CiscoDeviceIOS:
 
@@ -48,6 +48,7 @@ class CiscoDeviceIOS:
             # show_clock = ssh_connection.send_command('show clock')
             # print(f"Hour: {show_clock}")
 
-
+        th1 = threading.Thread(target=get_vlans_info, kwargs=devices)
+        print(th1)
 sa = CiscoDeviceIOS()
 sa.get_vlans_info()
