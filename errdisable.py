@@ -11,9 +11,11 @@ logger = logging.getLogger("netmiko")
 """
 The main proposal here is to identify all interfaces on environment without that not using 
 and disable to avoid man-in-the-middle.
+
 I'm using Netbox as Source of Truth to connect in devices. Function net_conn imported to use Netmiko 
 and function auth to pass all the parameters to authenticate 
 """
+
 #nb_api = list(auth.nb.dcim.devices.filter("mgmt",model="9200"))
 nb_api = list(auth.nb.dcim.devices.filter(platform="cisco-ios"))
 #nb_api = list(auth.nb.dcim.devices.filter(platform="cisco-nx-os"))

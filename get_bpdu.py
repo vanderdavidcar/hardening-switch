@@ -2,7 +2,7 @@ from netmiko import ConnectHandler
 import net_conn
 import re
 from colorama import Fore
-import threading
+
 
 class CiscoDeviceIOS:
 
@@ -11,7 +11,9 @@ class CiscoDeviceIOS:
             addresses = f.read().splitlines()
 
         for devices in addresses:
-            print(Fore.LIGHTBLACK_EX + f"\nConnecting to device: {devices}\n" + Fore.RESET)
+            print(
+                Fore.LIGHTBLACK_EX + f"\nConnecting to device: {devices}\n" + Fore.RESET
+            )
             device = {
                 "device_type": "cisco_ios",
                 "host": devices,
@@ -23,15 +25,17 @@ class CiscoDeviceIOS:
             # Connect to device
             ssh_connection = ConnectHandler(**device)
 
-            show_vlan = ssh_connection.find_prompt()
-            #show_ver_output = ssh_connection.send_command("show run")
-            show_bpdu = ssh_connection.send_command("show spanning-tree detail | inc Eth|BPDU")
-            #print(show_bpdu)
+            # show_ver_output = ssh_connection.send_command("show run")
+            show_bpdu = ssh_connection.send_command(
+                "show spanning-tree detail | inc Eth|BPDU"
+            )
+            # print(show_bpdu)
 
-            bpdu_pattern = r"Port.\w..(\S+[A-Za-z][0-9].[0-9].[0-9]*).+\s+BPDU:.sent.\w+,.received.(\d+)"
+            bpdu_pattern = r"Port.\w..(\S+[A-Za-z][0-9].[0-9].[0-9]*).of.(\S+).+\s+BPDU:.sent.\w+,.received.(\d+)"
             bpdu = re.findall(bpdu_pattern, show_bpdu)
-            
+
             print(bpdu)
-            
+
+
 sa = CiscoDeviceIOS()
 sa.get_vlans_info()
