@@ -21406,3 +21406,1432 @@ DEBUG:netmiko:read_channel: d
 
 DEBUG:netmiko:Pattern found: (show\ interface\ \|\ in\ disabled) show interface | in disabled
 DEBUG:netmiko:read_channel: S6#
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): netbox.int.flexcloud.com.br:443
+DEBUG:paramiko.transport:starting thread (client mode): 0x92944850
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_3.4.0
+DEBUG:paramiko.transport:Remote version/idstring: SSH-1.99-Cisco-1.25
+INFO:paramiko.transport:Connected (version 1.99, client Cisco-1.25)
+DEBUG:paramiko.transport:=== Key exchange possibilities ===
+DEBUG:paramiko.transport:kex algos: diffie-hellman-group-exchange-sha1, diffie-hellman-group14-sha1, diffie-hellman-group1-sha1
+DEBUG:paramiko.transport:server key: ssh-rsa
+DEBUG:paramiko.transport:client encrypt: aes128-ctr, aes192-ctr, aes256-ctr, aes128-cbc, 3des-cbc, aes192-cbc, aes256-cbc
+DEBUG:paramiko.transport:server encrypt: aes128-ctr, aes192-ctr, aes256-ctr, aes128-cbc, 3des-cbc, aes192-cbc, aes256-cbc
+DEBUG:paramiko.transport:client mac: hmac-sha1, hmac-sha1-96
+DEBUG:paramiko.transport:server mac: hmac-sha1, hmac-sha1-96
+DEBUG:paramiko.transport:client compress: none
+DEBUG:paramiko.transport:server compress: none
+DEBUG:paramiko.transport:client lang: <none>
+DEBUG:paramiko.transport:server lang: <none>
+DEBUG:paramiko.transport:kex follows: False
+DEBUG:paramiko.transport:=== Key exchange agreements ===
+DEBUG:paramiko.transport:Kex: diffie-hellman-group-exchange-sha1
+DEBUG:paramiko.transport:HostKey: ssh-rsa
+DEBUG:paramiko.transport:Cipher: aes128-ctr
+DEBUG:paramiko.transport:MAC: hmac-sha1
+DEBUG:paramiko.transport:Compression: none
+DEBUG:paramiko.transport:=== End of kex handshake ===
+DEBUG:paramiko.transport:Got server p (2048 bits)
+DEBUG:paramiko.transport:kex engine KexGex specified hash_algo <built-in function openssl_sha1>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ssh-rsa host key for S1: b'696b69385e62fc39c8884f06e041404c'
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Authentication (password) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 0] Max packet out: 4096 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:write_channel: b'terminal width 511\n'
+DEBUG:netmiko:read_channel: 
+S1#
+S1#
+DEBUG:netmiko:read_channel: ter
+DEBUG:netmiko:read_channel: mina
+DEBUG:netmiko:read_channel: l w
+DEBUG:netmiko:read_channel: idth
+DEBUG:netmiko:read_channel:  511
+
+DEBUG:netmiko:Pattern found: (terminal width 511) 
+S1#
+S1#terminal width 511
+DEBUG:netmiko:In disable_paging
+DEBUG:netmiko:Command: terminal length 0
+
+DEBUG:netmiko:write_channel: b'terminal length 0\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: S1#te
+DEBUG:netmiko:read_channel: rmin
+DEBUG:netmiko:read_channel: al l
+DEBUG:netmiko:read_channel: engt
+DEBUG:netmiko:read_channel: h 0
+
+DEBUG:netmiko:Pattern found: (terminal\ length\ 0) 
+S1#terminal length 0
+DEBUG:netmiko:
+S1#terminal length 0
+DEBUG:netmiko:Exiting disable_paging
+DEBUG:netmiko:read_channel: S1#
+DEBUG:netmiko:Clear buffer detects data in the channel
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+S1#
+DEBUG:netmiko:
+Parenthesis found in pattern.
+
+pattern: (\#|>)
+
+
+This can be problemtic when used in read_until_pattern().
+
+You should ensure that you use either non-capture groups i.e. '(?:' or that the
+parenthesis completely wrap the pattern '(pattern)'
+DEBUG:netmiko:Pattern found: (\#|>) 
+S1#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is S1#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+S1#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is S1#
+DEBUG:netmiko:write_channel: b'show version\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: sh
+DEBUG:netmiko:read_channel: ow 
+DEBUG:netmiko:read_channel: versio
+DEBUG:netmiko:read_channel: n
+Cisco IOS Software, Linux Software (I86BI_LINUXL2-ADVENTERPRISEK9-M), Version 15.2(CML_NIGHTLY_20151103)FLO_DSGS7, EARLY DEPLOYMENT DEVELOPMENT BUILD, synced to  FLO_DSGS7_POSTCOLLAPSE_TEAM_TRACK_DSGS_PI5
+Technical Support: http://www.********.com/techsupport
+Copyright (c) 1986-2015 by Cisco Systems, Inc.
+Compiled Wed 04-Nov-15 02:31 by mmen
+
+ROM: Bootstrap program is Linux
+
+S1 uptime is 19 minutes
+System returned to ROM by reload at 0
+System image file is "unix:/opt/unetlab/addons/iol/bin/L2-ADVENTERPRISEK9-M-15.2-IRON-20151"
+Last reload reason: Unknown reason
+
+
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.********.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@********.com.
+
+Linux Unix (Intel-x86) processor with 934130K bytes of memory.
+Processor board ID 67108880
+8 Ethernet interfaces
+6 Virtual Ethernet interfaces
+1024K bytes of NVRAM.
+
+Configuration register is 0x0
+
+S1#
+DEBUG:netmiko:Pattern found: (show\ version) show version
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+S1#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is S1#
+DEBUG:netmiko:write_channel: b'show version\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: sho
+DEBUG:netmiko:read_channel: w 
+DEBUG:netmiko:read_channel: ver
+DEBUG:netmiko:read_channel: sio
+DEBUG:netmiko:read_channel: n
+Cisco IOS Software, Linux Software (I86BI_LINUXL2-ADVENTERPRISEK9-M), Version 15.2(CML_NIGHTLY_20151103)FLO_DSGS7, EARLY DEPLOYMENT DEVELOPMENT BUILD, synced to  FLO_DSGS7_POSTCOLLAPSE_TEAM_TRACK_DSGS_PI5
+Technical Support: http://www.********.com/techsupport
+Copyright (c) 1986-2015 by Cisco Systems, Inc.
+Compiled Wed 04-Nov-15 02:31 by mmen
+
+ROM: Bootstrap program is Linux
+
+S1 uptime is 19 minutes
+System returned to ROM by reload at 0
+System image file is "unix:/opt/unetlab/addons/iol/bin/L2-ADVENTERPRISEK9-M-15.2-IRON-20151"
+Last reload reason: Unknown reason
+
+
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.********.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@********.com.
+
+Linux Unix (Intel-x86) processor with 934130K bytes of memory.
+Processor board ID 67108880
+8 Ethernet interfaces
+6 Virtual Ethernet interfaces
+1024K bytes of NVRAM.
+
+Configuration register is 0x0
+
+S1#
+DEBUG:netmiko:Pattern found: (show\ version) show version
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+S1#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is S1#
+DEBUG:netmiko:write_channel: b'show interface | in disabled\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: s
+DEBUG:netmiko:read_channel: how 
+DEBUG:netmiko:read_channel: in
+DEBUG:netmiko:read_channel: terf
+DEBUG:netmiko:read_channel: ace 
+DEBUG:netmiko:read_channel: | in
+DEBUG:netmiko:read_channel:  d
+DEBUG:netmiko:read_channel: is
+DEBUG:netmiko:read_channel: able
+DEBUG:netmiko:read_channel: d
+
+DEBUG:netmiko:Pattern found: (show\ interface\ \|\ in\ disabled) show interface | in disabled
+DEBUG:netmiko:read_channel: Ethernet0/3 is administratively down, line protocol is down (disabled) 
+S1#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+S1#
+DEBUG:netmiko:Pattern found: ([>#]) 
+S1#
+DEBUG:netmiko:write_channel: b'configure terminal\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: co
+DEBUG:netmiko:read_channel: nfi
+DEBUG:netmiko:read_channel: gure
+DEBUG:netmiko:read_channel:  termi
+DEBUG:netmiko:read_channel: nal
+DEBUG:netmiko:Pattern found: (configure\ terminal) configure terminal
+DEBUG:netmiko:read_channel: 
+
+DEBUG:netmiko:read_channel: Enter configuration commands, one per line.  End with CNTL/Z.
+S1(config)#
+DEBUG:netmiko:Pattern found: (S1.*) 
+Enter configuration commands, one per line.  End with CNTL/Z.
+S1(config)#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+S1(config)#
+DEBUG:netmiko:Pattern found: ([>#]) 
+S1(config)#
+DEBUG:netmiko:write_channel: b'interface Ethernet0/3\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: int
+DEBUG:netmiko:read_channel: erf
+DEBUG:netmiko:read_channel: ace 
+DEBUG:netmiko:read_channel: Ethe
+DEBUG:netmiko:read_channel: rnet0
+DEBUG:netmiko:read_channel: /3
+
+DEBUG:netmiko:Pattern found: (interface\ Ethernet0/3) interface Ethernet0/3
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: S1(config-if)#
+DEBUG:netmiko:Pattern found: ((?:S1.*$|#.*$)) 
+S1(config-if)#
+DEBUG:netmiko:write_channel: b'shutdwon\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: sh
+DEBUG:netmiko:read_channel: utd
+DEBUG:netmiko:read_channel: won
+
+DEBUG:netmiko:Pattern found: (shutdwon) shutdwon
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel:                    ^
+% Invalid input detected at '^' marker.
+
+S1(config-if)#
+DEBUG:netmiko:Pattern found: ((?:S1.*$|#.*$)) 
+                   ^
+% Invalid input detected at '^' marker.
+
+S1(config-if)#
+DEBUG:netmiko:write_channel: b'no shutdown\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: n
+DEBUG:netmiko:read_channel: o s
+DEBUG:netmiko:read_channel: hut
+DEBUG:netmiko:read_channel: dow
+DEBUG:netmiko:read_channel: n
+S1(config-if)#
+DEBUG:netmiko:Pattern found: (no\ shutdown) no shutdown
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:S1.*$|#.*$)) 
+S1(config-if)#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+
+DEBUG:netmiko:read_channel: S1(config-if)#
+DEBUG:netmiko:Pattern found: ([>#]) 
+S1(config-if)#
+DEBUG:netmiko:write_channel: b'end\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: e
+DEBUG:netmiko:read_channel: nd
+
+DEBUG:netmiko:Pattern found: (end) end
+DEBUG:netmiko:read_channel: S1#
+DEBUG:netmiko:Pattern found: (#.*) 
+S1#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+
+DEBUG:netmiko:read_channel: S1#
+DEBUG:netmiko:Pattern found: ([>#]) 
+S1#
+DEBUG:netmiko:exit_config_mode: end
+S1#
+DEBUG:netmiko:configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+S1(config)#interface Ethernet0/3
+S1(config-if)#shutdwon
+                   ^
+% Invalid input detected at '^' marker.
+
+S1(config-if)#no shutdown
+S1(config-if)#end
+S1#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+S1#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is S1#
+DEBUG:netmiko:write_channel: b'show interface Ethernet0/3  status\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: s
+DEBUG:netmiko:read_channel: how
+DEBUG:netmiko:read_channel:  in
+DEBUG:netmiko:read_channel: ter
+DEBUG:netmiko:read_channel: fac
+DEBUG:netmiko:read_channel: e E
+DEBUG:netmiko:read_channel: the
+DEBUG:netmiko:read_channel: rn
+DEBUG:netmiko:read_channel: et0/
+DEBUG:netmiko:read_channel: 3 
+DEBUG:netmiko:read_channel:  sta
+DEBUG:netmiko:read_channel: tus
+DEBUG:netmiko:Pattern found: (show\ interface\ Ethernet0/3\ \ status) show interface Ethernet0/3  status
+DEBUG:netmiko:read_channel: 
+
+Port      Name               Status       Vlan       Duplex  Speed Type 
+Et0/3                        connected    1            auto   auto unknown
+S1#
+DEBUG:paramiko.transport:starting thread (client mode): 0x92945f90
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_3.4.0
+DEBUG:paramiko.transport:Remote version/idstring: SSH-2.0-Cisco-1.25
+INFO:paramiko.transport:Connected (version 2.0, client Cisco-1.25)
+DEBUG:paramiko.transport:=== Key exchange possibilities ===
+DEBUG:paramiko.transport:kex algos: diffie-hellman-group-exchange-sha1, diffie-hellman-group14-sha1, diffie-hellman-group1-sha1
+DEBUG:paramiko.transport:server key: ssh-rsa
+DEBUG:paramiko.transport:client encrypt: aes128-ctr, aes192-ctr, aes256-ctr, aes128-cbc, 3des-cbc, aes192-cbc, aes256-cbc
+DEBUG:paramiko.transport:server encrypt: aes128-ctr, aes192-ctr, aes256-ctr, aes128-cbc, 3des-cbc, aes192-cbc, aes256-cbc
+DEBUG:paramiko.transport:client mac: hmac-sha1, hmac-sha1-96
+DEBUG:paramiko.transport:server mac: hmac-sha1, hmac-sha1-96
+DEBUG:paramiko.transport:client compress: none
+DEBUG:paramiko.transport:server compress: none
+DEBUG:paramiko.transport:client lang: <none>
+DEBUG:paramiko.transport:server lang: <none>
+DEBUG:paramiko.transport:kex follows: False
+DEBUG:paramiko.transport:=== Key exchange agreements ===
+DEBUG:paramiko.transport:Kex: diffie-hellman-group-exchange-sha1
+DEBUG:paramiko.transport:HostKey: ssh-rsa
+DEBUG:paramiko.transport:Cipher: aes128-ctr
+DEBUG:paramiko.transport:MAC: hmac-sha1
+DEBUG:paramiko.transport:Compression: none
+DEBUG:paramiko.transport:=== End of kex handshake ===
+DEBUG:paramiko.transport:Got server p (2048 bits)
+DEBUG:paramiko.transport:kex engine KexGex specified hash_algo <built-in function openssl_sha1>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ssh-rsa host key for S2: b'187c91f28e7d627fd40efaead443448f'
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Authentication (password) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 0] Max packet out: 4096 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:write_channel: b'terminal width 511\n'
+DEBUG:netmiko:read_channel: ***********************THIS IS VANDERSON LAB ENVIRONMENT - DO NOT MAKE CHANGES UNLESS AUTHORIZED************************
+S2#
+S2#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: te
+DEBUG:netmiko:read_channel: r
+DEBUG:netmiko:read_channel: mi
+DEBUG:netmiko:read_channel: n
+DEBUG:netmiko:read_channel: al
+DEBUG:netmiko:read_channel:  w
+DEBUG:netmiko:read_channel: i
+DEBUG:netmiko:read_channel: d
+DEBUG:netmiko:read_channel: th
+DEBUG:netmiko:read_channel:  
+DEBUG:netmiko:read_channel: 51
+DEBUG:netmiko:read_channel: 1
+
+DEBUG:netmiko:Pattern found: (terminal width 511) ***********************THIS IS VANDERSON LAB ENVIRONMENT - DO NOT MAKE CHANGES UNLESS AUTHORIZED************************
+S2#
+S2#terminal width 511
+DEBUG:netmiko:In disable_paging
+DEBUG:netmiko:Command: terminal length 0
+
+DEBUG:netmiko:write_channel: b'terminal length 0\n'
+DEBUG:netmiko:read_channel: S2#
+DEBUG:netmiko:read_channel: te
+DEBUG:netmiko:read_channel: rm
+DEBUG:netmiko:read_channel: in
+DEBUG:netmiko:read_channel: al
+DEBUG:netmiko:read_channel:  
+DEBUG:netmiko:read_channel: len
+DEBUG:netmiko:read_channel: g
+DEBUG:netmiko:read_channel: t
+DEBUG:netmiko:read_channel: h
+DEBUG:netmiko:read_channel:  0
+DEBUG:netmiko:Pattern found: (terminal\ length\ 0) 
+S2#terminal length 0
+DEBUG:netmiko:
+S2#terminal length 0
+DEBUG:netmiko:Exiting disable_paging
+DEBUG:netmiko:read_channel: 
+S2#
+DEBUG:netmiko:Clear buffer detects data in the channel
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+S2#
+DEBUG:netmiko:
+Parenthesis found in pattern.
+
+pattern: (\#|>)
+
+
+This can be problemtic when used in read_until_pattern().
+
+You should ensure that you use either non-capture groups i.e. '(?:' or that the
+parenthesis completely wrap the pattern '(pattern)'
+DEBUG:netmiko:Pattern found: (\#|>) 
+S2#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is S2#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+S2#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is S2#
+DEBUG:netmiko:write_channel: b'show version\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: s
+DEBUG:netmiko:read_channel: ho
+DEBUG:netmiko:read_channel: w
+DEBUG:netmiko:read_channel:  v
+DEBUG:netmiko:read_channel: er
+DEBUG:netmiko:read_channel: si
+DEBUG:netmiko:read_channel: on
+DEBUG:netmiko:Pattern found: (show\ version) show version
+DEBUG:netmiko:read_channel: 
+Cisco IOS Software, Linux Software (I86BI_LINUXL2-ADVENTERPRISEK9-M), Version 15.2(CML_NIGHTLY_20151103)FLO_DSGS7, EARLY DEPLOYMENT DEVELOPMENT BUILD, synced to  FLO_DSGS7_POSTCOLLAPSE_TEAM_TRACK_DSGS_PI5
+Technical Support: http://www.********.com/techsupport
+Copyright (c) 1986-2015 by Cisco Systems, Inc.
+Compiled Wed 04-Nov-15 02:31 by mmen
+
+ROM: Bootstrap program is Linux
+
+S2 uptime is 19 minutes
+System returned to ROM by reload at 0
+System image file is "unix:/opt/unetlab/addons/iol/bin/L2-ADVENTERPRISEK9-M-15.2-IRON-20151"
+Last reload reason: Unknown reason
+
+
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.********.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@********.com.
+
+Linux Unix (Intel-x86) processor with 934130K bytes of memory.
+Processor board ID 67108896
+8 Ethernet interfaces
+1 Virtual Ethernet interface
+1024K bytes of NVRAM.
+
+Configuration register is 0x0
+
+S2#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+S2#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is S2#
+DEBUG:netmiko:write_channel: b'show version\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: sh
+DEBUG:netmiko:read_channel: ow
+DEBUG:netmiko:read_channel:  v
+DEBUG:netmiko:read_channel: er
+DEBUG:netmiko:read_channel: si
+DEBUG:netmiko:read_channel: on
+
+DEBUG:netmiko:Pattern found: (show\ version) show version
+DEBUG:netmiko:read_channel: Cisco IOS Software, Linux Software (I86BI_LINUXL2-ADVENTERPRISEK9-M), Version 15.2(CML_NIGHTLY_20151103)FLO_DSGS7, EARLY DEPLOYMENT DEVELOPMENT BUILD, synced to  FLO_DSGS7_POSTCOLLAPSE_TEAM_TRACK_DSGS_PI5
+Technical Support: http://www.********.com/techsupport
+Copyright (c) 1986-2015 by Cisco Systems, Inc.
+Compiled Wed 04-Nov-15 02:31 by mmen
+
+ROM: Bootstrap program is Linux
+
+S2 uptime is 19 minutes
+System returned to ROM by reload at 0
+System image file is "unix:/opt/unetlab/addons/iol/bin/L2-ADVENTERPRISEK9-M-15.2-IRON-20151"
+Last reload reason: Unknown reason
+
+
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.********.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@********.com.
+
+Linux Unix (Intel-x86) processor with 934130K bytes of memory.
+Processor board ID 67108896
+8 Ethernet interfaces
+1 Virtual Ethernet interface
+1024K bytes of NVRAM.
+
+Configuration register is 0x0
+
+S2#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+S2#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is S2#
+DEBUG:netmiko:write_channel: b'show interface | in disabled\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: s
+DEBUG:netmiko:read_channel: ho
+DEBUG:netmiko:read_channel: w
+DEBUG:netmiko:read_channel:  i
+DEBUG:netmiko:read_channel: nt
+DEBUG:netmiko:read_channel: er
+DEBUG:netmiko:read_channel: f
+DEBUG:netmiko:read_channel: ace
+DEBUG:netmiko:read_channel:  |
+DEBUG:netmiko:read_channel:  
+DEBUG:netmiko:read_channel: in
+DEBUG:netmiko:read_channel:  d
+DEBUG:netmiko:read_channel: is
+DEBUG:netmiko:read_channel: a
+DEBUG:netmiko:read_channel: bl
+DEBUG:netmiko:read_channel: ed
+DEBUG:netmiko:Pattern found: (show\ interface\ \|\ in\ disabled) show interface | in disabled
+DEBUG:netmiko:read_channel: 
+S2#
+DEBUG:paramiko.transport:starting thread (client mode): 0x929469e0
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_3.4.0
+DEBUG:paramiko.transport:Remote version/idstring: SSH-1.99-Cisco-1.25
+INFO:paramiko.transport:Connected (version 1.99, client Cisco-1.25)
+DEBUG:paramiko.transport:=== Key exchange possibilities ===
+DEBUG:paramiko.transport:kex algos: diffie-hellman-group-exchange-sha1, diffie-hellman-group14-sha1, diffie-hellman-group1-sha1
+DEBUG:paramiko.transport:server key: ssh-rsa
+DEBUG:paramiko.transport:client encrypt: aes128-ctr, aes192-ctr, aes256-ctr, aes128-cbc, 3des-cbc, aes192-cbc, aes256-cbc
+DEBUG:paramiko.transport:server encrypt: aes128-ctr, aes192-ctr, aes256-ctr, aes128-cbc, 3des-cbc, aes192-cbc, aes256-cbc
+DEBUG:paramiko.transport:client mac: hmac-sha1, hmac-sha1-96
+DEBUG:paramiko.transport:server mac: hmac-sha1, hmac-sha1-96
+DEBUG:paramiko.transport:client compress: none
+DEBUG:paramiko.transport:server compress: none
+DEBUG:paramiko.transport:client lang: <none>
+DEBUG:paramiko.transport:server lang: <none>
+DEBUG:paramiko.transport:kex follows: False
+DEBUG:paramiko.transport:=== Key exchange agreements ===
+DEBUG:paramiko.transport:Kex: diffie-hellman-group-exchange-sha1
+DEBUG:paramiko.transport:HostKey: ssh-rsa
+DEBUG:paramiko.transport:Cipher: aes128-ctr
+DEBUG:paramiko.transport:MAC: hmac-sha1
+DEBUG:paramiko.transport:Compression: none
+DEBUG:paramiko.transport:=== End of kex handshake ===
+DEBUG:paramiko.transport:Got server p (2048 bits)
+DEBUG:paramiko.transport:kex engine KexGex specified hash_algo <built-in function openssl_sha1>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ssh-rsa host key for S3: b'd41c877cc6a172bfbb3d8622e77fb60f'
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Authentication (password) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 0] Max packet out: 4096 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:write_channel: b'terminal width 511\n'
+DEBUG:netmiko:read_channel: ***********************THIS IS VANDERSON LAB ENVIRONMENT - DO NOT MAKE CHANGES UNLESS AUTHORIZED************************
+S3#
+S3#
+DEBUG:netmiko:read_channel: te
+DEBUG:netmiko:read_channel: rmin
+DEBUG:netmiko:read_channel: al w
+DEBUG:netmiko:read_channel: idth
+DEBUG:netmiko:read_channel:  511
+S3#
+DEBUG:netmiko:Pattern found: (terminal width 511) ***********************THIS IS VANDERSON LAB ENVIRONMENT - DO NOT MAKE CHANGES UNLESS AUTHORIZED************************
+S3#
+S3#terminal width 511
+DEBUG:netmiko:In disable_paging
+DEBUG:netmiko:Command: terminal length 0
+
+DEBUG:netmiko:write_channel: b'terminal length 0\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: t
+DEBUG:netmiko:read_channel: ermi
+DEBUG:netmiko:read_channel: nal 
+DEBUG:netmiko:read_channel: len
+DEBUG:netmiko:read_channel: gth
+DEBUG:netmiko:read_channel:  0
+S3#
+DEBUG:netmiko:Pattern found: (terminal\ length\ 0) 
+S3#terminal length 0
+DEBUG:netmiko:
+S3#terminal length 0
+DEBUG:netmiko:Exiting disable_paging
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Clear buffer detects data in the channel
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+
+DEBUG:netmiko:read_channel: S3#
+DEBUG:netmiko:
+Parenthesis found in pattern.
+
+pattern: (\#|>)
+
+
+This can be problemtic when used in read_until_pattern().
+
+You should ensure that you use either non-capture groups i.e. '(?:' or that the
+parenthesis completely wrap the pattern '(pattern)'
+DEBUG:netmiko:Pattern found: (\#|>) 
+S3#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is S3#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+S3#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is S3#
+DEBUG:netmiko:write_channel: b'show version\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: s
+DEBUG:netmiko:read_channel: ho
+DEBUG:netmiko:read_channel: w v
+DEBUG:netmiko:read_channel: er
+DEBUG:netmiko:read_channel: sio
+DEBUG:netmiko:read_channel: n
+
+DEBUG:netmiko:Pattern found: (show\ version) show version
+DEBUG:netmiko:read_channel: Cisco IOS Software, Linux Software (I86BI_LINUXL2-ADVENTERPRISEK9-M), Version 15.2(CML_NIGHTLY_20151103)FLO_DSGS7, EARLY DEPLOYMENT DEVELOPMENT BUILD, synced to  FLO_DSGS7_POSTCOLLAPSE_TEAM_TRACK_DSGS_PI5
+Technical Support: http://www.********.com/techsupport
+Copyright (c) 1986-2015 by Cisco Systems, Inc.
+Compiled Wed 04-Nov-15 02:31 by mmen
+
+ROM: Bootstrap program is Linux
+
+S3 uptime is 19 minutes
+System returned to ROM by reload at 0
+System image file is "unix:/opt/unetlab/addons/iol/bin/L2-ADVENTERPRISEK9-M-15.2-IRON-20151"
+Last reload reason: Unknown reason
+
+
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.********.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@********.com.
+
+Linux Unix (Intel-x86) processor with 934130K bytes of memory.
+Processor board ID 67108912
+8 Ethernet interfaces
+2 Virtual Ethernet interfaces
+1024K bytes of NVRAM.
+
+Configuration register is 0x0
+
+S3#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+S3#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is S3#
+DEBUG:netmiko:write_channel: b'show version\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: s
+DEBUG:netmiko:read_channel: ho
+DEBUG:netmiko:read_channel: w 
+DEBUG:netmiko:read_channel: ver
+DEBUG:netmiko:read_channel: sio
+DEBUG:netmiko:read_channel: n
+
+DEBUG:netmiko:Pattern found: (show\ version) show version
+DEBUG:netmiko:read_channel: Cisco IOS Software, Linux Software (I86BI_LINUXL2-ADVENTERPRISEK9-M), Version 15.2(CML_NIGHTLY_20151103)FLO_DSGS7, EARLY DEPLOYMENT DEVELOPMENT BUILD, synced to  FLO_DSGS7_POSTCOLLAPSE_TEAM_TRACK_DSGS_PI5
+Technical Support: http://www.********.com/techsupport
+Copyright (c) 1986-2015 by Cisco Systems, Inc.
+Compiled Wed 04-Nov-15 02:31 by mmen
+
+ROM: Bootstrap program is Linux
+
+S3 uptime is 19 minutes
+System returned to ROM by reload at 0
+System image file is "unix:/opt/unetlab/addons/iol/bin/L2-ADVENTERPRISEK9-M-15.2-IRON-20151"
+Last reload reason: Unknown reason
+
+
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.********.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@********.com.
+
+Linux Unix (Intel-x86) processor with 934130K bytes of memory.
+Processor board ID 67108912
+8 Ethernet interfaces
+2 Virtual Ethernet interfaces
+1024K bytes of NVRAM.
+
+Configuration register is 0x0
+
+S3#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+S3#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is S3#
+DEBUG:netmiko:write_channel: b'show interface | in disabled\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: sh
+DEBUG:netmiko:read_channel: ow 
+DEBUG:netmiko:read_channel: in
+DEBUG:netmiko:read_channel: ter
+DEBUG:netmiko:read_channel: fac
+DEBUG:netmiko:read_channel: e |
+DEBUG:netmiko:read_channel:  in
+DEBUG:netmiko:read_channel:  d
+DEBUG:netmiko:read_channel: isa
+DEBUG:netmiko:read_channel: ble
+DEBUG:netmiko:read_channel: d
+
+DEBUG:netmiko:Pattern found: (show\ interface\ \|\ in\ disabled) show interface | in disabled
+DEBUG:netmiko:read_channel: S3#
+DEBUG:paramiko.transport:starting thread (client mode): 0x92970280
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_3.4.0
+DEBUG:paramiko.transport:Remote version/idstring: SSH-1.99-Cisco-1.25
+INFO:paramiko.transport:Connected (version 1.99, client Cisco-1.25)
+DEBUG:paramiko.transport:=== Key exchange possibilities ===
+DEBUG:paramiko.transport:kex algos: diffie-hellman-group-exchange-sha1, diffie-hellman-group14-sha1, diffie-hellman-group1-sha1
+DEBUG:paramiko.transport:server key: ssh-rsa
+DEBUG:paramiko.transport:client encrypt: aes128-ctr, aes192-ctr, aes256-ctr, aes128-cbc, 3des-cbc, aes192-cbc, aes256-cbc
+DEBUG:paramiko.transport:server encrypt: aes128-ctr, aes192-ctr, aes256-ctr, aes128-cbc, 3des-cbc, aes192-cbc, aes256-cbc
+DEBUG:paramiko.transport:client mac: hmac-sha1, hmac-sha1-96
+DEBUG:paramiko.transport:server mac: hmac-sha1, hmac-sha1-96
+DEBUG:paramiko.transport:client compress: none
+DEBUG:paramiko.transport:server compress: none
+DEBUG:paramiko.transport:client lang: <none>
+DEBUG:paramiko.transport:server lang: <none>
+DEBUG:paramiko.transport:kex follows: False
+DEBUG:paramiko.transport:=== Key exchange agreements ===
+DEBUG:paramiko.transport:Kex: diffie-hellman-group-exchange-sha1
+DEBUG:paramiko.transport:HostKey: ssh-rsa
+DEBUG:paramiko.transport:Cipher: aes128-ctr
+DEBUG:paramiko.transport:MAC: hmac-sha1
+DEBUG:paramiko.transport:Compression: none
+DEBUG:paramiko.transport:=== End of kex handshake ===
+DEBUG:paramiko.transport:Got server p (2048 bits)
+DEBUG:paramiko.transport:kex engine KexGex specified hash_algo <built-in function openssl_sha1>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ssh-rsa host key for S4: b'28f9d6d9b802ecfe836697e28134096b'
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Authentication (password) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 0] Max packet out: 4096 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:write_channel: b'terminal width 511\n'
+DEBUG:netmiko:read_channel: ***********************THIS IS VANDERSON LAB ENVIRONMENT - DO NOT MAKE CHANGES UNLESS AUTHORIZED************************
+S4#
+S4#
+DEBUG:netmiko:read_channel: te
+DEBUG:netmiko:read_channel: rminal
+DEBUG:netmiko:read_channel:  w
+DEBUG:netmiko:read_channel: idth
+DEBUG:netmiko:read_channel:  51
+DEBUG:netmiko:read_channel: 1
+S4#
+DEBUG:netmiko:Pattern found: (terminal width 511) ***********************THIS IS VANDERSON LAB ENVIRONMENT - DO NOT MAKE CHANGES UNLESS AUTHORIZED************************
+S4#
+S4#terminal width 511
+DEBUG:netmiko:In disable_paging
+DEBUG:netmiko:Command: terminal length 0
+
+DEBUG:netmiko:write_channel: b'terminal length 0\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: t
+DEBUG:netmiko:read_channel: ermi
+DEBUG:netmiko:read_channel: na
+DEBUG:netmiko:read_channel: l 
+DEBUG:netmiko:read_channel: leng
+DEBUG:netmiko:read_channel: th 0
+S4#
+DEBUG:netmiko:Pattern found: (terminal\ length\ 0) 
+S4#terminal length 0
+DEBUG:netmiko:
+S4#terminal length 0
+DEBUG:netmiko:Exiting disable_paging
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Clear buffer detects data in the channel
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+S4#
+DEBUG:netmiko:
+Parenthesis found in pattern.
+
+pattern: (\#|>)
+
+
+This can be problemtic when used in read_until_pattern().
+
+You should ensure that you use either non-capture groups i.e. '(?:' or that the
+parenthesis completely wrap the pattern '(pattern)'
+DEBUG:netmiko:Pattern found: (\#|>) 
+S4#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is S4#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+S4#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is S4#
+DEBUG:netmiko:write_channel: b'show version\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: sh
+DEBUG:netmiko:read_channel: ow 
+DEBUG:netmiko:read_channel: vers
+DEBUG:netmiko:read_channel: ion
+
+DEBUG:netmiko:Pattern found: (show\ version) show version
+DEBUG:netmiko:read_channel: Cisco IOS Software, Linux Software (I86BI_LINUXL2-ADVENTERPRISEK9-M), Version 15.2(CML_NIGHTLY_20151103)FLO_DSGS7, EARLY DEPLOYMENT DEVELOPMENT BUILD, synced to  FLO_DSGS7_POSTCOLLAPSE_TEAM_TRACK_DSGS_PI5
+Technical Support: http://www.********.com/techsupport
+Copyright (c) 1986-2015 by Cisco Systems, Inc.
+Compiled Wed 04-Nov-15 02:31 by mmen
+
+ROM: Bootstrap program is Linux
+
+S4 uptime is 19 minutes
+System returned to ROM by reload at 0
+System image file is "unix:/opt/unetlab/addons/iol/bin/L2-ADVENTERPRISEK9-M-15.2-IRON-20151"
+Last reload reason: Unknown reason
+
+
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.********.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@********.com.
+
+Linux Unix (Intel-x86) processor with 934130K bytes of memory.
+Processor board ID 67108928
+8 Ethernet interfaces
+1 Virtual Ethernet interface
+1024K bytes of NVRAM.
+
+Configuration register is 0x0
+
+S4#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+S4#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is S4#
+DEBUG:netmiko:write_channel: b'show version\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: sh
+DEBUG:netmiko:read_channel: ow 
+DEBUG:netmiko:read_channel: vers
+DEBUG:netmiko:read_channel: ion
+
+DEBUG:netmiko:Pattern found: (show\ version) show version
+DEBUG:netmiko:read_channel: Cisco IOS Software, Linux Software (I86BI_LINUXL2-ADVENTERPRISEK9-M), Version 15.2(CML_NIGHTLY_20151103)FLO_DSGS7, EARLY DEPLOYMENT DEVELOPMENT BUILD, synced to  FLO_DSGS7_POSTCOLLAPSE_TEAM_TRACK_DSGS_PI5
+Technical Support: http://www.********.com/techsupport
+Copyright (c) 1986-2015 by Cisco Systems, Inc.
+Compiled Wed 04-Nov-15 02:31 by mmen
+
+ROM: Bootstrap program is Linux
+
+S4 uptime is 19 minutes
+System returned to ROM by reload at 0
+System image file is "unix:/opt/unetlab/addons/iol/bin/L2-ADVENTERPRISEK9-M-15.2-IRON-20151"
+Last reload reason: Unknown reason
+
+
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.********.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@********.com.
+
+Linux Unix (Intel-x86) processor with 934130K bytes of memory.
+Processor board ID 67108928
+8 Ethernet interfaces
+1 Virtual Ethernet interface
+1024K bytes of NVRAM.
+
+Configuration register is 0x0
+
+S4#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+S4#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is S4#
+DEBUG:netmiko:write_channel: b'show interface | in disabled\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: sh
+DEBUG:netmiko:read_channel: ow i
+DEBUG:netmiko:read_channel: nte
+DEBUG:netmiko:read_channel: rfac
+DEBUG:netmiko:read_channel: e | 
+DEBUG:netmiko:read_channel: in d
+DEBUG:netmiko:read_channel: isab
+DEBUG:netmiko:read_channel: led
+
+DEBUG:netmiko:Pattern found: (show\ interface\ \|\ in\ disabled) show interface | in disabled
+DEBUG:netmiko:read_channel: S4#
+DEBUG:paramiko.transport:starting thread (client mode): 0x92970fa0
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_3.4.0
+DEBUG:paramiko.transport:Remote version/idstring: SSH-1.99-Cisco-1.25
+INFO:paramiko.transport:Connected (version 1.99, client Cisco-1.25)
+DEBUG:paramiko.transport:=== Key exchange possibilities ===
+DEBUG:paramiko.transport:kex algos: diffie-hellman-group-exchange-sha1, diffie-hellman-group14-sha1, diffie-hellman-group1-sha1
+DEBUG:paramiko.transport:server key: ssh-rsa
+DEBUG:paramiko.transport:client encrypt: aes128-ctr, aes192-ctr, aes256-ctr, aes128-cbc, 3des-cbc, aes192-cbc, aes256-cbc
+DEBUG:paramiko.transport:server encrypt: aes128-ctr, aes192-ctr, aes256-ctr, aes128-cbc, 3des-cbc, aes192-cbc, aes256-cbc
+DEBUG:paramiko.transport:client mac: hmac-sha1, hmac-sha1-96
+DEBUG:paramiko.transport:server mac: hmac-sha1, hmac-sha1-96
+DEBUG:paramiko.transport:client compress: none
+DEBUG:paramiko.transport:server compress: none
+DEBUG:paramiko.transport:client lang: <none>
+DEBUG:paramiko.transport:server lang: <none>
+DEBUG:paramiko.transport:kex follows: False
+DEBUG:paramiko.transport:=== Key exchange agreements ===
+DEBUG:paramiko.transport:Kex: diffie-hellman-group-exchange-sha1
+DEBUG:paramiko.transport:HostKey: ssh-rsa
+DEBUG:paramiko.transport:Cipher: aes128-ctr
+DEBUG:paramiko.transport:MAC: hmac-sha1
+DEBUG:paramiko.transport:Compression: none
+DEBUG:paramiko.transport:=== End of kex handshake ===
+DEBUG:paramiko.transport:Got server p (2048 bits)
+DEBUG:paramiko.transport:kex engine KexGex specified hash_algo <built-in function openssl_sha1>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ssh-rsa host key for S5: b'a5d145507c36d644a2e103cd011b29e7'
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Authentication (password) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 0] Max packet out: 4096 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:write_channel: b'terminal width 511\n'
+DEBUG:netmiko:read_channel: ***********************THIS IS VANDERSON LAB ENVIRONMENT - DO NOT MAKE CHANGES UNLESS AUTHORIZED************************
+S5#
+S5#
+DEBUG:netmiko:read_channel: t
+DEBUG:netmiko:read_channel: ermin
+DEBUG:netmiko:read_channel: al 
+DEBUG:netmiko:read_channel: wid
+DEBUG:netmiko:read_channel: th 511
+S5#
+DEBUG:netmiko:Pattern found: (terminal width 511) ***********************THIS IS VANDERSON LAB ENVIRONMENT - DO NOT MAKE CHANGES UNLESS AUTHORIZED************************
+S5#
+S5#terminal width 511
+DEBUG:netmiko:In disable_paging
+DEBUG:netmiko:Command: terminal length 0
+
+DEBUG:netmiko:write_channel: b'terminal length 0\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: ter
+DEBUG:netmiko:read_channel: minal
+DEBUG:netmiko:read_channel:  len
+DEBUG:netmiko:read_channel: gth 0
+DEBUG:netmiko:Pattern found: (terminal\ length\ 0) 
+S5#terminal length 0
+DEBUG:netmiko:
+S5#terminal length 0
+DEBUG:netmiko:Exiting disable_paging
+DEBUG:netmiko:read_channel: 
+S5#
+DEBUG:netmiko:Clear buffer detects data in the channel
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+S5#
+DEBUG:netmiko:
+Parenthesis found in pattern.
+
+pattern: (\#|>)
+
+
+This can be problemtic when used in read_until_pattern().
+
+You should ensure that you use either non-capture groups i.e. '(?:' or that the
+parenthesis completely wrap the pattern '(pattern)'
+DEBUG:netmiko:Pattern found: (\#|>) 
+S5#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is S5#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+S5#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is S5#
+DEBUG:netmiko:write_channel: b'show version\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: s
+DEBUG:netmiko:read_channel: how 
+DEBUG:netmiko:read_channel: vers
+DEBUG:netmiko:read_channel: ion
+DEBUG:netmiko:Pattern found: (show\ version) show version
+DEBUG:netmiko:read_channel: 
+Cisco IOS Software, Linux Software (I86BI_LINUXL2-ADVENTERPRISEK9-M), Version 15.2(CML_NIGHTLY_20151103)FLO_DSGS7, EARLY DEPLOYMENT DEVELOPMENT BUILD, synced to  FLO_DSGS7_POSTCOLLAPSE_TEAM_TRACK_DSGS_PI5
+Technical Support: http://www.********.com/techsupport
+Copyright (c) 1986-2015 by Cisco Systems, Inc.
+Compiled Wed 04-Nov-15 02:31 by mmen
+
+ROM: Bootstrap program is Linux
+
+S5 uptime is 19 minutes
+System returned to ROM by reload at 0
+System image file is "unix:/opt/unetlab/addons/iol/bin/L2-ADVENTERPRISEK9-M-15.2-IRON-20151"
+Last reload reason: Unknown reason
+
+
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.********.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@********.com.
+
+Linux Unix (Intel-x86) processor with 934130K bytes of memory.
+Processor board ID 67108992
+8 Ethernet interfaces
+2 Virtual Ethernet interfaces
+1024K bytes of NVRAM.
+
+Configuration register is 0x0
+
+S5#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+S5#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is S5#
+DEBUG:netmiko:write_channel: b'show version\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: s
+DEBUG:netmiko:read_channel: ho
+DEBUG:netmiko:read_channel: w 
+DEBUG:netmiko:read_channel: ve
+DEBUG:netmiko:read_channel: rsio
+DEBUG:netmiko:read_channel: n
+Cisco IOS Software, Linux Software (I86BI_LINUXL2-ADVENTERPRISEK9-M), Version 15.2(CML_NIGHTLY_20151103)FLO_DSGS7, EARLY DEPLOYMENT DEVELOPMENT BUILD, synced to  FLO_DSGS7_POSTCOLLAPSE_TEAM_TRACK_DSGS_PI5
+Technical Support: http://www.********.com/techsupport
+Copyright (c) 1986-2015 by Cisco Systems, Inc.
+Compiled Wed 04-Nov-15 02:31 by mmen
+
+ROM: Bootstrap program is Linux
+
+S5 uptime is 19 minutes
+System returned to ROM by reload at 0
+System image file is "unix:/opt/unetlab/addons/iol/bin/L2-ADVENTERPRISEK9-M-15.2-IRON-20151"
+Last reload reason: Unknown reason
+
+
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.********.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@********.com.
+
+Linux Unix (Intel-x86) processor with 934130K bytes of memory.
+Processor board ID 67108992
+8 Ethernet interfaces
+2 Virtual Ethernet interfaces
+1024K bytes of NVRAM.
+
+Configuration register is 0x0
+
+S5#
+DEBUG:netmiko:Pattern found: (show\ version) show version
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+S5#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is S5#
+DEBUG:netmiko:write_channel: b'show interface | in disabled\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: sho
+DEBUG:netmiko:read_channel: w 
+DEBUG:netmiko:read_channel: int
+DEBUG:netmiko:read_channel: e
+DEBUG:netmiko:read_channel: rf
+DEBUG:netmiko:read_channel: ace
+DEBUG:netmiko:read_channel:  | 
+DEBUG:netmiko:read_channel: in 
+DEBUG:netmiko:read_channel: d
+DEBUG:netmiko:read_channel: isa
+DEBUG:netmiko:read_channel: ble
+DEBUG:netmiko:read_channel: d
+
+DEBUG:netmiko:Pattern found: (show\ interface\ \|\ in\ disabled) show interface | in disabled
+DEBUG:netmiko:read_channel: S5#
+DEBUG:paramiko.transport:starting thread (client mode): 0x92970a60
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_3.4.0
+DEBUG:paramiko.transport:Remote version/idstring: SSH-1.99-Cisco-1.25
+INFO:paramiko.transport:Connected (version 1.99, client Cisco-1.25)
+DEBUG:paramiko.transport:=== Key exchange possibilities ===
+DEBUG:paramiko.transport:kex algos: diffie-hellman-group-exchange-sha1, diffie-hellman-group14-sha1, diffie-hellman-group1-sha1
+DEBUG:paramiko.transport:server key: ssh-rsa
+DEBUG:paramiko.transport:client encrypt: aes128-ctr, aes192-ctr, aes256-ctr, aes128-cbc, 3des-cbc, aes192-cbc, aes256-cbc
+DEBUG:paramiko.transport:server encrypt: aes128-ctr, aes192-ctr, aes256-ctr, aes128-cbc, 3des-cbc, aes192-cbc, aes256-cbc
+DEBUG:paramiko.transport:client mac: hmac-sha1, hmac-sha1-96
+DEBUG:paramiko.transport:server mac: hmac-sha1, hmac-sha1-96
+DEBUG:paramiko.transport:client compress: none
+DEBUG:paramiko.transport:server compress: none
+DEBUG:paramiko.transport:client lang: <none>
+DEBUG:paramiko.transport:server lang: <none>
+DEBUG:paramiko.transport:kex follows: False
+DEBUG:paramiko.transport:=== Key exchange agreements ===
+DEBUG:paramiko.transport:Kex: diffie-hellman-group-exchange-sha1
+DEBUG:paramiko.transport:HostKey: ssh-rsa
+DEBUG:paramiko.transport:Cipher: aes128-ctr
+DEBUG:paramiko.transport:MAC: hmac-sha1
+DEBUG:paramiko.transport:Compression: none
+DEBUG:paramiko.transport:=== End of kex handshake ===
+DEBUG:paramiko.transport:Got server p (2048 bits)
+DEBUG:paramiko.transport:kex engine KexGex specified hash_algo <built-in function openssl_sha1>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ssh-rsa host key for S6: b'288f6050d733af165f3df2b1db233aa0'
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Authentication (password) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 0] Max packet out: 4096 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:write_channel: b'terminal width 511\n'
+DEBUG:netmiko:read_channel: ***********************THIS IS VANDERSON LAB ENVIRONMENT - DO NOT MAKE CHANGES UNLESS AUTHORIZED************************
+S6#
+S6#
+DEBUG:netmiko:read_channel: t
+DEBUG:netmiko:read_channel: er
+DEBUG:netmiko:read_channel: mi
+DEBUG:netmiko:read_channel: nal 
+DEBUG:netmiko:read_channel: widt
+DEBUG:netmiko:read_channel: h 51
+DEBUG:netmiko:read_channel: 1
+S6#
+DEBUG:netmiko:Pattern found: (terminal width 511) ***********************THIS IS VANDERSON LAB ENVIRONMENT - DO NOT MAKE CHANGES UNLESS AUTHORIZED************************
+S6#
+S6#terminal width 511
+DEBUG:netmiko:In disable_paging
+DEBUG:netmiko:Command: terminal length 0
+
+DEBUG:netmiko:write_channel: b'terminal length 0\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: te
+DEBUG:netmiko:read_channel: rmi
+DEBUG:netmiko:read_channel: nal 
+DEBUG:netmiko:read_channel: leng
+DEBUG:netmiko:read_channel: th 0
+DEBUG:netmiko:Pattern found: (terminal\ length\ 0) 
+S6#terminal length 0
+DEBUG:netmiko:
+S6#terminal length 0
+DEBUG:netmiko:Exiting disable_paging
+DEBUG:netmiko:read_channel: 
+S6#
+DEBUG:netmiko:Clear buffer detects data in the channel
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+S6#
+DEBUG:netmiko:
+Parenthesis found in pattern.
+
+pattern: (\#|>)
+
+
+This can be problemtic when used in read_until_pattern().
+
+You should ensure that you use either non-capture groups i.e. '(?:' or that the
+parenthesis completely wrap the pattern '(pattern)'
+DEBUG:netmiko:Pattern found: (\#|>) 
+S6#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is S6#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+S6#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is S6#
+DEBUG:netmiko:write_channel: b'show version\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: sho
+DEBUG:netmiko:read_channel: w v
+DEBUG:netmiko:read_channel: ersio
+DEBUG:netmiko:read_channel: n
+Cisco IOS Software, Linux Software (I86BI_LINUXL2-ADVENTERPRISEK9-M), Version 15.2(CML_NIGHTLY_20151103)FLO_DSGS7, EARLY DEPLOYMENT DEVELOPMENT BUILD, synced to  FLO_DSGS7_POSTCOLLAPSE_TEAM_TRACK_DSGS_PI5
+Technical Support: http://www.********.com/techsupport
+Copyright (c) 1986-2015 by Cisco Systems, Inc.
+Compiled Wed 04-Nov-15 02:31 by mmen
+
+ROM: Bootstrap program is Linux
+
+S6 uptime is 19 minutes
+System returned to ROM by reload at 0
+System image file is "unix:/opt/unetlab/addons/iol/bin/L2-ADVENTERPRISEK9-M-15.2-IRON-20151"
+Last reload reason: Unknown reason
+
+
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.********.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@********.com.
+
+Linux Unix (Intel-x86) processor with 934130K bytes of memory.
+Processor board ID 67108944
+8 Ethernet interfaces
+1 Virtual Ethernet interface
+1024K bytes of NVRAM.
+
+Configuration register is 0x0
+
+S6#
+DEBUG:netmiko:Pattern found: (show\ version) show version
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+S6#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is S6#
+DEBUG:netmiko:write_channel: b'show version\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: sh
+DEBUG:netmiko:read_channel: ow 
+DEBUG:netmiko:read_channel: vers
+DEBUG:netmiko:read_channel: ion
+
+DEBUG:netmiko:Pattern found: (show\ version) show version
+DEBUG:netmiko:read_channel: Cisco IOS Software, Linux Software (I86BI_LINUXL2-ADVENTERPRISEK9-M), Version 15.2(CML_NIGHTLY_20151103)FLO_DSGS7, EARLY DEPLOYMENT DEVELOPMENT BUILD, synced to  FLO_DSGS7_POSTCOLLAPSE_TEAM_TRACK_DSGS_PI5
+Technical Support: http://www.********.com/techsupport
+Copyright (c) 1986-2015 by Cisco Systems, Inc.
+Compiled Wed 04-Nov-15 02:31 by mmen
+
+ROM: Bootstrap program is Linux
+
+S6 uptime is 19 minutes
+System returned to ROM by reload at 0
+System image file is "unix:/opt/unetlab/addons/iol/bin/L2-ADVENTERPRISEK9-M-15.2-IRON-20151"
+Last reload reason: Unknown reason
+
+
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.********.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@********.com.
+
+Linux Unix (Intel-x86) processor with 934130K bytes of memory.
+Processor board ID 67108944
+8 Ethernet interfaces
+1 Virtual Ethernet interface
+1024K bytes of NVRAM.
+
+Configuration register is 0x0
+
+S6#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+S6#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is S6#
+DEBUG:netmiko:write_channel: b'show interface | in disabled\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: s
+DEBUG:netmiko:read_channel: how 
+DEBUG:netmiko:read_channel: inte
+DEBUG:netmiko:read_channel: rfac
+DEBUG:netmiko:read_channel: e |
+DEBUG:netmiko:read_channel:  in 
+DEBUG:netmiko:read_channel: dis
+DEBUG:netmiko:read_channel: able
+DEBUG:netmiko:read_channel: d
+
+DEBUG:netmiko:Pattern found: (show\ interface\ \|\ in\ disabled) show interface | in disabled
+DEBUG:netmiko:read_channel: S6#

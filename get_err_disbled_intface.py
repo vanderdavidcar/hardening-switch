@@ -29,7 +29,7 @@ Loop devices find on Netbox
 """
 for ip in nb_api:
     ipadd = str(ip)
-    ios = net_conn.netmiko_ios(ipadd)
+    ios = net_conn.netmiko_connection(ipadd)
     print(Fore.BLUE + f"Connecting to the device: {ipadd}" + Fore.RESET)
 
     """
