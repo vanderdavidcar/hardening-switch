@@ -1,3 +1,5 @@
+# https://www.consentfactory.com/python-threading-queuing-netmiko/
+
 # Queuing and threading libraries
 from queue import Queue
 import threading
