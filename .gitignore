@@ -3,5 +3,5 @@ net_conn.py
 auth.py
 *_model.py
 *parallels*
-get_multithreading.py
+netmiko_multithreading.py
 netmiko_global.log
