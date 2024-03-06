@@ -10,6 +10,7 @@ class CiscoDeviceIOS:
         with open("hosts", "r") as f:
             addresses = f.read().splitlines()
 
+        
         for devices in addresses:
             device = {
                 "device_type": "cisco_ios",
